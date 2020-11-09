@@ -1,0 +1,156 @@
+/*
+  Hello!
+  These are some base styles so that our tutorial looks good.
+  Let's go through the important bits real quick
+*/
+:root {
+  --yellow: #ffc600; /*This is just some simple css variables*/
+  --black: #272727;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 900;
+  font-size: 10px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url('./images/topography.svg'),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  /* background: white; */
+  background-attachment: fixed;
+  letter-spacing: -1px;
+  font-size: 15px;
+}
+
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* PLEASE DO NOT TOUCH THE ABOVE STYLES
+ WRITE YOUR OWN STYLES BELOW. GOOD LUCK */
+
+.features{
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(3,0.09fr);
+  grid-gap: 1em;
+}
+.feature{
+  background: #fff;
+  text-align: center;
+}
+.feature h3{
+  font-size: 20px;
+}
+.feature p {
+  font-size: 13px;
+  color: #b6b6b6;
+  padding: 10px;
+}
+.about{
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(0.3,0.2fr);
+  background: #fff;
+}
+.about img{
+  margin: 28%;
+}
+.about__details{
+  font-size: 13.5px;
+  position: relative;left: 100px;top: 100px;
+}
+.menu ul{
+   display: grid;
+   grid-gap: 1.25em;
+   padding: 0;
+   list-style: none;
+   grid-template-columns: repeat(5, 1fr);
+}
+.menu a{
+  background: var(--yellow);
+  display: block;
+  padding: 0.8em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+
+}
+a{
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+li{
+  font-size: 19px;
+  text-align: center;
+  padding-top: 3%;
+}
+.top{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+  'showcase showcase top-box-a'
+  'showcase showcase top-box-b'
+}
+.hero{
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(images/taco.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: center;
+}
+.cta1{
+  grid-area: top-box-a;
+}
+.cta{
+  background: var(--yellow);
+  padding: 3.2em 1em;
+  text-align: center;
+}
+.hero h1{
+  font-size: 3rem;
+  margin: 0;
+  background: var(--yellow);
+  padding: 0. 0.1;
+}
+.hero p{
+  background: var(--yellow);
+  padding: 0.1em 0.1em;
+  font-weight: 700;
+}
+.body::selection{
+  touch-action: none;
+font: none;
+}
