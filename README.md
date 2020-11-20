@@ -1,5 +1,4 @@
 # mini-classwork-
-# Hotels.ng_Auwal-Isa
 A kitchen mini project Page
 
 ## Description
